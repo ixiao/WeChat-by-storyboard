@@ -25,9 +25,14 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (self.navigationController.navigationBarHidden==YES) {
+        self.navigationController.navigationBarHidden=NO;
+        
+    }
+    else
+        self.navigationController.navigationBarHidden=YES;
 }
 
 /*

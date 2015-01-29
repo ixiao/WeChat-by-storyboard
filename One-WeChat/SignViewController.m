@@ -9,6 +9,8 @@
 #import "SignViewController.h"
 
 @interface SignViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *txtNumber;
+@property (strong, nonatomic) IBOutlet UITextField *phoneNumber;
 
 @end
 
@@ -22,7 +24,19 @@
 - (IBAction)btnCancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+#pragma mark 国家表视图
+- (IBAction)btnCountry:(id)sender {
+    
+    UINavigationController * navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"countriesNAV"];
+    [self presentViewController:navVC animated:YES completion:nil];
+    
+}
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.txtNumber resignFirstResponder];
+    [self.phoneNumber resignFirstResponder];
+}
 
 /*
 #pragma mark - Navigation

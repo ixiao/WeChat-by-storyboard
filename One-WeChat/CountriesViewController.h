@@ -1,5 +1,5 @@
 //
-//  LoginViewController.h
+//  CountriesViewController.h
 //  One-WeChat
 //
 //  Created by 闫潇 on 15/1/28.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController<UIActionSheetDelegate,UITextFieldDelegate>
+@interface CountriesViewController : UITableViewController
 
 @end

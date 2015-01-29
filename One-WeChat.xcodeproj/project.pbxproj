@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110841321A79281E00EAD386 /* CountriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 110841311A79281E00EAD386 /* CountriesViewController.m */; };
+		111B54341A7A1676005565A7 /* SignNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 111B54331A7A1676005565A7 /* SignNumberViewController.m */; };
 		11B95B101A75061700B30EFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B95B0F1A75061700B30EFE /* main.m */; };
 		11B95B131A75061700B30EFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B95B121A75061700B30EFE /* AppDelegate.m */; };
 		11B95B191A75061700B30EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B95B171A75061700B30EFE /* Main.storyboard */; };
@@ -187,6 +189,7 @@
 		11B95CAB1A766B1900B30EFE /* IMG_4197.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 11B95CA31A766B1900B30EFE /* IMG_4197.JPG */; };
 		11B95CAC1A766B1900B30EFE /* IMG_4198.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 11B95CA41A766B1900B30EFE /* IMG_4198.JPG */; };
 		11B95CAD1A766B1900B30EFE /* IMG_4199.png in Resources */ = {isa = PBXBuildFile; fileRef = 11B95CA51A766B1900B30EFE /* IMG_4199.png */; };
+		11F6F7A41A790C7C004E3278 /* BottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F6F7A31A790C7C004E3278 /* BottleViewController.m */; };
 		11FDE0151A78F1720071CC86 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDE0141A78F1720071CC86 /* LoginViewController.m */; };
 		11FDE0181A78F1D90071CC86 /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDE0171A78F1D90071CC86 /* SignViewController.m */; };
 		11FFE4061A77BD56007163E1 /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FFE4051A77BD56007163E1 /* IndexViewController.m */; };
@@ -204,6 +207,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		110841301A79281E00EAD386 /* CountriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountriesViewController.h; sourceTree = "<group>"; };
+		110841311A79281E00EAD386 /* CountriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesViewController.m; sourceTree = "<group>"; };
+		111B54321A7A1676005565A7 /* SignNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignNumberViewController.h; sourceTree = "<group>"; };
+		111B54331A7A1676005565A7 /* SignNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignNumberViewController.m; sourceTree = "<group>"; };
 		11B95B0A1A75061700B30EFE /* One-WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "One-WeChat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B95B0E1A75061700B30EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11B95B0F1A75061700B30EFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -396,6 +403,8 @@
 		11B95CA31A766B1900B30EFE /* IMG_4197.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4197.JPG; sourceTree = "<group>"; };
 		11B95CA41A766B1900B30EFE /* IMG_4198.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4198.JPG; sourceTree = "<group>"; };
 		11B95CA51A766B1900B30EFE /* IMG_4199.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_4199.png; sourceTree = "<group>"; };
+		11F6F7A21A790C7C004E3278 /* BottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottleViewController.h; sourceTree = "<group>"; };
+		11F6F7A31A790C7C004E3278 /* BottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottleViewController.m; sourceTree = "<group>"; };
 		11FDE0131A78F1720071CC86 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		11FDE0141A78F1720071CC86 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		11FDE0161A78F1D90071CC86 /* SignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignViewController.h; sourceTree = "<group>"; };
@@ -444,29 +453,19 @@
 		11B95B0C1A75061700B30EFE /* One-WeChat */ = {
 			isa = PBXGroup;
 			children = (
+				11F6F7A11A790C4E004E3278 /* 登录注册 */,
+				11F6F7A01A790C19004E3278 /* 常用界面 */,
 				11B95B111A75061700B30EFE /* AppDelegate.h */,
 				11B95B121A75061700B30EFE /* AppDelegate.m */,
 				11B95B171A75061700B30EFE /* Main.storyboard */,
-				11FFE4041A77BD56007163E1 /* IndexViewController.h */,
-				11FFE4051A77BD56007163E1 /* IndexViewController.m */,
-				11FDE0131A78F1720071CC86 /* LoginViewController.h */,
-				11FDE0141A78F1720071CC86 /* LoginViewController.m */,
-				11FDE0161A78F1D90071CC86 /* SignViewController.h */,
-				11FDE0171A78F1D90071CC86 /* SignViewController.m */,
-				11B95C7E1A75139A00B30EFE /* WeChatViewController.h */,
-				11B95C7F1A75139A00B30EFE /* WeChatViewController.m */,
-				11B95C811A7513CA00B30EFE /* ContactsViewController.h */,
-				11B95C821A7513CA00B30EFE /* ContactsViewController.m */,
-				11B95C841A7514A700B30EFE /* FindViewController.h */,
-				11B95C851A7514A700B30EFE /* FindViewController.m */,
-				11B95C871A7514B200B30EFE /* MeViewController.h */,
-				11B95C881A7514B200B30EFE /* MeViewController.m */,
 				11B95C8A1A751E7D00B30EFE /* TalkViewController.h */,
 				11B95C8B1A751E7D00B30EFE /* TalkViewController.m */,
 				11B95C8D1A751EC500B30EFE /* DetailViewController.h */,
 				11B95C8E1A751EC500B30EFE /* DetailViewController.m */,
 				11B95C901A751EDC00B30EFE /* AddBroViewController.h */,
 				11B95C911A751EDC00B30EFE /* AddBroViewController.m */,
+				11F6F7A21A790C7C004E3278 /* BottleViewController.h */,
+				11F6F7A31A790C7C004E3278 /* BottleViewController.m */,
 				11B95B1A1A75061700B30EFE /* Images.xcassets */,
 				11B95C991A75CE6C00B30EFE /* 002@2x.jpeg */,
 				11B95C971A75CDE900B30EFE /* 003@2x.jpeg */,
@@ -738,6 +737,38 @@
 				11B95CA51A766B1900B30EFE /* IMG_4199.png */,
 			);
 			path = icone;
+			sourceTree = "<group>";
+		};
+		11F6F7A01A790C19004E3278 /* 常用界面 */ = {
+			isa = PBXGroup;
+			children = (
+				11B95C7E1A75139A00B30EFE /* WeChatViewController.h */,
+				11B95C7F1A75139A00B30EFE /* WeChatViewController.m */,
+				11B95C811A7513CA00B30EFE /* ContactsViewController.h */,
+				11B95C821A7513CA00B30EFE /* ContactsViewController.m */,
+				11B95C841A7514A700B30EFE /* FindViewController.h */,
+				11B95C851A7514A700B30EFE /* FindViewController.m */,
+				11B95C871A7514B200B30EFE /* MeViewController.h */,
+				11B95C881A7514B200B30EFE /* MeViewController.m */,
+			);
+			name = "常用界面";
+			sourceTree = "<group>";
+		};
+		11F6F7A11A790C4E004E3278 /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				11FFE4041A77BD56007163E1 /* IndexViewController.h */,
+				11FFE4051A77BD56007163E1 /* IndexViewController.m */,
+				11FDE0131A78F1720071CC86 /* LoginViewController.h */,
+				11FDE0141A78F1720071CC86 /* LoginViewController.m */,
+				11FDE0161A78F1D90071CC86 /* SignViewController.h */,
+				11FDE0171A78F1D90071CC86 /* SignViewController.m */,
+				110841301A79281E00EAD386 /* CountriesViewController.h */,
+				110841311A79281E00EAD386 /* CountriesViewController.m */,
+				111B54321A7A1676005565A7 /* SignNumberViewController.h */,
+				111B54331A7A1676005565A7 /* SignNumberViewController.m */,
+			);
+			name = "登录注册";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1017,9 +1048,12 @@
 				11B95C921A751EDC00B30EFE /* AddBroViewController.m in Sources */,
 				11FDE0181A78F1D90071CC86 /* SignViewController.m in Sources */,
 				11B95B101A75061700B30EFE /* main.m in Sources */,
+				111B54341A7A1676005565A7 /* SignNumberViewController.m in Sources */,
 				11B95C801A75139A00B30EFE /* WeChatViewController.m in Sources */,
+				11F6F7A41A790C7C004E3278 /* BottleViewController.m in Sources */,
 				11FDE0151A78F1720071CC86 /* LoginViewController.m in Sources */,
 				11B95C8C1A751E7D00B30EFE /* TalkViewController.m in Sources */,
+				110841321A79281E00EAD386 /* CountriesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

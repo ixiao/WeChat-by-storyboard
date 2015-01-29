@@ -34,11 +34,33 @@
 
 #pragma mark 注册
 - (IBAction)btnSign:(id)sender {
-    UINavigationController * sb = [self.storyboard instantiateViewControllerWithIdentifier:@"signVC"];
-    [self presentViewController:sb animated:YES completion:nil];
-
+//    UINavigationController * sb = [self.storyboard instantiateViewControllerWithIdentifier:@"signVC"];
+//    [self presentViewController:sb animated:YES completion:nil];
+    UIActionSheet * actionSheet = [[UIActionSheet alloc]initWithTitle:@"请选择注册方式" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@"微信号注册",@"手机号注册", nil];
+    [actionSheet showInView:self.view];
 }
 
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex)
+    {
+        case 0:
+        {
+            UINavigationController * sb = [self.storyboard instantiateViewControllerWithIdentifier:@"signNumberVC"];
+            [self presentViewController:sb animated:YES completion:nil];
+        }
+            break;
+        case 1:
+        {
+            UINavigationController * sb = [self.storyboard instantiateViewControllerWithIdentifier:@"signVC"];
+            [self presentViewController:sb animated:YES completion:nil];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 
 /*
 #pragma mark - Navigation
