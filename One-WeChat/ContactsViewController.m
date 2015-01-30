@@ -8,26 +8,19 @@
 
 #import "ContactsViewController.h"
 #import "AddBroViewController.h"
+#import "ChineseIndex.h"
 @interface ContactsViewController ()
 @property (nonatomic,strong) AddBroViewController * addBroVC;
 @property (nonatomic,strong) UIBarButtonItem * right;
 @property (nonatomic,strong) NSArray * nicknameArr;//昵称数据源
 @property (nonatomic,strong) NSArray * iconArr;//图标数据源
 @property (nonatomic,strong) NSArray * detailArr;//详情数据源
+@property (nonatomic,strong) NSArray * keys;//排序数组
+@property (strong, nonatomic) NSDictionary *dict;
+
 @end
 
 @implementation ContactsViewController
--(void)awakeFromNib
-{
-    [super awakeFromNib];
-    self.tabBarItem.title=@"通讯录";
-    
-    self.tabBarItem.image = [[UIImage imageNamed:@"tabbar_contacts@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    self.tabBarItem.selectedImage= [[UIImage imageNamed:@"tabbar_contactsHL@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    self.tableView=[[UITableView alloc]initWithFrame:[[UIScreen mainScreen]bounds] style:UITableViewStylePlain];
-}
 
 
 
@@ -42,26 +35,45 @@
     self.detailArr=@[@"❤你很逊内!...",@"这就货很懒，什么也没留下...",@"生活不是眼前的苟且,生活有诗和远方",@"星辰 大海",@"这就货很懒，什么也没留下...",@"这就货很懒，什么也没留下...",@"给你一个看得见的未来。",@"bis dass der Tod uns scheide",@"我是打不死的姗姗小公主！！！",@"据考证，此人反射弧有一光年之长。",@"[命是弱者的借口，运是强者的谦词。]",@"这就货很懒，什么也没留下...",@"手工蛋糕预订",@"吃饭，蛋B，边吃饭边蛋B",@"孤独****(看不懂思密达~)",@"这就货很懒，什么也没留下...",@"为何不从现在开始",@"一整个宇宙换一颗红豆",@"没关系，是爱情啊",@"水壶啊，你为什么哭泣，是因为屁股太烫了吗"];
     
 
+    NSDictionary *dict = [ChineseIndex groupedChineseCharacter:self.nicknameArr];
     
+    
+    
+   
+    self.keys=[[dict allKeys]sortedArrayUsingSelector:@selector(compare:)];
+    self.dict = dict;
+    [self.tableView reloadData];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    NSLog(@"00");
-}
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    
+
+//    self.tabBarItem.title=@"通讯录";
+    
+//    self.tabBarItem.image = [[UIImage imageNamed:@"tabbar_contacts@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    
+//    self.tabBarItem.selectedImage= [[UIImage imageNamed:@"tabbar_contactsHL@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    
+//    NSLog(@"00");
+//}
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
     // Return the number of sections.
-    return 1;
+    return self.keys.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return self.nicknameArr.count;
+    NSString *key = self.keys[section];
+    NSArray *temp = self.dict[key];
+    
+    return temp.count;
 }
 
 
@@ -74,7 +86,11 @@
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
     cell.imageView.image=[UIImage imageNamed:self.iconArr[indexPath.row]];
-    cell.textLabel.text=self.nicknameArr[indexPath.row];
+    
+    NSString *key = self.keys[indexPath.section];
+    NSArray *arr = self.dict[key];
+    cell.textLabel.text=arr[indexPath.row];
+    
     cell.detailTextLabel.text=self.detailArr[indexPath.row];
 
     
@@ -86,13 +102,18 @@
     return 56;
 }
 
-/*
+//该数据源方法给表视图添加分区索引
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return self.keys;
+}
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
+
 
 /*
 // Override to support editing the table view.

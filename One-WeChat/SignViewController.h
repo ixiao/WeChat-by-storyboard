@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignViewController : UIViewController
+@interface SignViewController : UIViewController<UITextFieldDelegate>
 
 
 

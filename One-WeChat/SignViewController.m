@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.txtNumber.delegate=self;
+//    self.phoneNumber.delegate=self;
     // Do any additional setup after loading the view.
 }
 
@@ -31,6 +33,8 @@
     [self presentViewController:navVC animated:YES completion:nil];
     
 }
+
+
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {

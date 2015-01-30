@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface FindViewController : UITableViewController
+#import <CoreLocation/CoreLocation.h>
+@interface FindViewController : UITableViewController<CLLocationManagerDelegate>
 
 @end

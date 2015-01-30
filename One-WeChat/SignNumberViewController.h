@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignNumberViewController : UIViewController<UITextFieldDelegate>
+@interface SignNumberViewController : UIViewController<UITextFieldDelegate,UITextViewDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *userNumber;
 @property (strong, nonatomic) IBOutlet UITextField *userPass;
 

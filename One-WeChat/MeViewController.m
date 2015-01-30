@@ -14,24 +14,24 @@
 
 @implementation MeViewController
 
--(void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    self.tabBarItem.title=@"我";
-    
-    self.tabBarItem.image=[[UIImage imageNamed:@"tabbar_me@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    self.tabBarItem.selectedImage=[[UIImage imageNamed:@"tabbar_meHL@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-}
+//-(void)awakeFromNib
+//{
+//    [super awakeFromNib];
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+//    self.tabBarItem.title=@"我";
     
-    self.tabBarController.navigationItem.title=@"我";
-    
-}
+//    self.tabBarItem.image=[[UIImage imageNamed:@"tabbar_me@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    
+//    self.tabBarItem.selectedImage=[[UIImage imageNamed:@"tabbar_meHL@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//}
+
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    
+//    self.tabBarController.navigationItem.title=@"我";
+//    
+//}
 
 
 

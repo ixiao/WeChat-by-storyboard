@@ -15,24 +15,24 @@
 
 @implementation WeChatViewController
 #pragma 从storyboard中唤醒当前类对象
--(void)awakeFromNib
-{
-    [super awakeFromNib];
-    self.tabBarItem.title=@"微信";
+//-(void)awakeFromNib
+//{
+//    [super awakeFromNib];
+//    self.tabBarItem.title=@"微信";
     
-    self.tabBarItem.image = [[UIImage imageNamed:@"tabbar_mainframe@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    self.tabBarItem.image = [[UIImage imageNamed:@"tabbar_mainframe@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    
+//    self.tabBarItem.selectedImage= [[UIImage imageNamed:@"tabbar_mainframeHL@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    self.tabBarItem.selectedImage= [[UIImage imageNamed:@"tabbar_mainframeHL@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-}
+//}
 #pragma mark 视图将要出现时
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.tabBarController.tabBar.tintColor=[UIColor greenColor];
-    
-    self.tabBarController.navigationItem.title=@"微信";
-    
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    self.tabBarController.tabBar.tintColor=[UIColor greenColor];
+//    
+//    self.tabBarController.navigationItem.title=@"微信";
+
     //创建右导航按钮
 //    if (!self.rightBtn)
 //    {
@@ -40,7 +40,7 @@
 //    }
 //    self.tabBarController.navigationItem.rightBarButtonItem=self.rightBtn;
 
-}
+//}
 //-(void)next:(UIBarButtonItem *)sender
 //{
 //    if (!self.talkVC)
@@ -55,7 +55,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tabBarItem.badgeValue=@"1";
+    [self.tabBarItem setBadgeValue:@"2"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
